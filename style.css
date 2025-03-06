@@ -1,41 +1,56 @@
+/* Importation de la police Western */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* Styles généraux */
 body {
-    font-family: "Western", cursive;
+    font-family: 'Special Elite', cursive;
+    background: #8F422A ;
+    color: #4E2A14;
     text-align: center;
-    background-color: #f4e1c6;
     margin: 0;
-    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
+/* Conteneur style "affiche vintage" */
 .container {
-    background: #deb887;
-    padding: 20px;
+    background: #F4E1C1;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    margin: 50px auto;
-    max-width: 600px;
-    border: 5px solid #8b4513;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border: 10px solid #8B4513;
+    max-width: 500px;
+    width: 90%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
+/* Titres avec effet Western */
 h1 {
-    color: #8b4513;
-    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    color: #8B0000;
 }
 
+/* Texte de l'énigme */
 p {
-    font-size: 1.2em;
-    color: #4b2e1e;
+    font-size: 18px;
+    margin: 10px 0;
 }
 
+/* Suppression des puces dans la liste */
 ul {
     text-align: left;
     display: inline-block;
     margin: 20px auto;
     padding: 0;
-    background: #f4e1c6;
-    border: 2px solid #8b4513;
+    list-style-type: none;
+    background: #FAE0C3;
+    border: 2px solid #8B4513;
     padding: 10px;
     border-radius: 5px;
 }
@@ -43,5 +58,15 @@ ul {
 li {
     font-size: 1.1em;
     margin-bottom: 10px;
-    color: #4b2e1e;
+    color: #4E2A14;
+}
+
+/* Ajout d’un effet de brûlure sur les bords */
+.container::before {
+    content: "";
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    background: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+    opacity: 0.3;
+    border-radius: 10px;
 }
