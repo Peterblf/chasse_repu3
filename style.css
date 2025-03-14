@@ -1,7 +1,6 @@
-/* Importation de la police Western */
+/* Importation d'une police western */
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-/* Styles généraux */
 body {
     font-family: 'Special Elite', cursive;
     background: #8F422A ;
@@ -33,7 +32,34 @@ body {
             }
         }
 
-/* Conteneur style "affiche vintage" */
+/* ✅ Correction : S'assurer que l'input est interactif */
+input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #8B4513;
+    background: #FAE0C3;
+    color: #4E2A14;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+
+    /* ✅ Suppression des restrictions potentielles */
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    display: inline-block !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* ✅ Ajout d'un focus clair sur l'input */
+input:focus {
+    outline: 3px solid #FFD700;
+    background: #FFF5D7;
+}
+
+/* Conteneur style "vieille affiche" */
 .container {
     background: #F4E1C1;
     padding: 30px;
@@ -43,10 +69,9 @@ body {
     max-width: 500px;
     width: 90%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    position: relative;
 }
 
-/* Titres avec effet Western */
+/* Titres avec effet vintage */
 h1 {
     font-size: 28px;
     margin-bottom: 15px;
@@ -55,32 +80,49 @@ h1 {
     color: #8B0000;
 }
 
-/* Texte de l'énigme */
+/* Texte énigme */
 p {
     font-size: 18px;
     margin: 10px 0;
 }
 
-/* Suppression des puces dans la liste */
-ul {
-    text-align: left;
-    display: inline-block;
-    margin: 20px auto;
-    padding: 0;
-    list-style-type: none;
-    background: #FAE0C3;
-    border: 2px solid #8B4513;
-    padding: 10px;
+/* ✅ Correction : Bouton cliquable sans restriction */
+button {
+    background: #8B4513;
+    color: #FFD700;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid #4E2A14;
     border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Special Elite', cursive;
+
+    /* ✅ Suppression de tout effet qui pourrait bloquer le clic */
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    display: inline-block !important;
+    position: relative !important;
+    z-index: 10 !important;
 }
 
-li {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    color: #4E2A14;
+button:hover {
+    background: #A0522D;
+    color: white;
+}
+
+/* Message validation / erreur */
+.message {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /* Ajout d’un effet de brûlure sur les bords */
+.container {
+    position: relative;
+}
 .container::before {
     content: "";
     position: absolute;
