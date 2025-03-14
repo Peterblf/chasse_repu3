@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Étape 3 - Terrasse</title>
+    <title>Étape 3 - Terrasse </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,17 +11,25 @@
         <img src="logo.png" alt="Logo" class="logo"> <!-- Remplacez "votre-logo.png" par le chemin de votre logo -->
     </div>
     <div class="container">
-        <h1>Étape 3 : Terrasse</h1>
-        <p><strong>Coordonnées d’un banc face au Student Hub de l’école :</strong></p>
-        <p>48°7_ … .2"N 2°21'4_ … .5"E</p>
-        
-        <h2>Indices :</h2>
-        <ul>
-            <li>Mon premier chiffre manquant est en lien avec un gâteau en deux mots</li>
-            <li>Mon second chiffre manquant est en lien avec le cheval qui a créé une invasion légendaire</li>
-            <li>Mon dernier chiffre manquant se mange et il est en lien avec la poule</li>
-        </ul>
-        <p>Une fois les coordonnées complètes, entrez-les dans Google Maps pour trouver l'endroit exact !</p>
+        <h1>Étape 3 - Terrasse</h1>
+        <p>Entrez le code récupérer dans le hall </p>
+        <input type="text" id="code" placeholder="Entrez le code" required>
+        <button id="valider">Valider</button>
+        <div id="message"></div>
     </div>
+
+    <script>
+        document.getElementById("valider").addEventListener("click", function() {
+            let code = document.getElementById("code").value.toLowerCase();
+            let message = document.getElementById("message");
+
+            if (code === "2108") { // Remplace "code_correct" par le vrai code
+                window.location.href = "bravo2.html";
+            } else {
+                message.innerHTML = "<p>Mauvais code, essayez encore !</p>";
+                message.style.color = "red";
+            }
+        });
+    </script>
 </body>
 </html>
